@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Eventos Agendados</h1>
+    {% if eventos %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data e Hora</th>
+                    <th>Email</th>
+                    <th>Enviado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for evento in eventos %}
+                    <tr>
+                        <td>{{ evento.titulo }}</td>
+                        <td>{{ evento.descricao }}</td>
+                        <td>{{ evento.data_evento.strftime('%d/%m/%Y %H:%M') }}</td>
+                        <td>{{ evento.email }}</td>
+                        <td>{{ 'Sim' if evento.enviado else 'Não' }}</td>
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Nenhum evento agendado.</p>
+    {% endif %}
+{% endblock %}

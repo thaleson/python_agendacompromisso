@@ -1,0 +1,9 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-WTF
+email-validator
+Flask-Mail
+redis
+rq
+python-dotenv

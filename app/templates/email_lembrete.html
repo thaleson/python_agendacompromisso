@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lembrete de Compromisso</title>
+</head>
+<body>
+    <p>Olá!</p>
+    <p>Este é um lembrete para o seu compromisso:</p>
+    <ul>
+        <li><strong>Título:</strong> {{ evento.titulo }}</li>
+        <li><strong>Descrição:</strong> {{ evento.descricao }}</li>
+        <li><strong>Data e Hora:</strong> {{ evento.data_evento.strftime('%d/%m/%Y %H:%M') }}</li>
+    </ul>
+    <p>Até breve!</p>
+</body>
+</html>
